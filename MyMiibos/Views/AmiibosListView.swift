@@ -18,6 +18,7 @@ struct AmiibosListView: View {
         UINavigationBar.appearance().barTintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.white]
         UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+//        UINavigationBar.appearance().largeTitleTextAttributes.
     }
     
     var body: some View {
@@ -26,8 +27,7 @@ struct AmiibosListView: View {
                 
                 NavigationLink(
                     destination: AmiiboDetailView(head: amiibo.head, tail: amiibo.tail)) {
-//                    Text("\(amiibo.name)")
-                    AmiiboListRowView.init(name: amiibo.name)
+                    AmiiboListRowView.init(name: amiibo.name, logo: amiibo.getAmiiboSeriesLogo()).frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                 }
             }
             .navigationBarTitle("Amiibos")
@@ -45,6 +45,8 @@ struct AmiibosListView: View {
 
 struct AmiibosListView_Previews: PreviewProvider {
     static var previews: some View {
-        AmiibosListView()
+        Group {
+            AmiibosListView()
+        }
     }
 }

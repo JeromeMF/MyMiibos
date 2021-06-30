@@ -14,8 +14,8 @@
             filePath = "MyMiibos/Views/AmiibosListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -144,6 +144,22 @@
             startingLineNumber = "19"
             endingLineNumber = "19"
             landmarkName = "fetchAmiiboDetail(amiiboHead:amiiboTail:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6E07F163-63E1-41DE-9AD4-3FC1969EAA3C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyMiibos/Models/AmiiboModel.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "getAmiiboSeriesLogo()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
