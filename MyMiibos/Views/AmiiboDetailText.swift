@@ -14,21 +14,18 @@ struct AmiiboDetailText: View {
     var type: String
     
     var body: some View {
-        VStack(spacing: 20) {
-            HStack{
-                Text("Amiibo series: ").font(.system(size: 25)).fontWeight(.bold).padding(.leading, 15)
-                Text(gameSeries).font(.system(size: 25)).fontWeight(.light)
-                Spacer()
+        VStack(spacing: 30) {
+            VStack{
+                Text("Amiibo series:").font(.system(size: 23)).fontWeight(.bold).padding(.leading, 15)
+                Text(amiiboSeries).font(.system(size: 26)).fontWeight(.light)
             }
-            HStack {
-                Text("Game series: ").font(.system(size: 25)).fontWeight(.bold).padding(.leading, 15)
-                Text(gameSeries).font(.system(size: 25)).fontWeight(.light)
-                Spacer()
+            VStack {
+                Text("Game series:").font(.system(size: 23)).fontWeight(.bold).padding(.leading, 15)
+                Text(gameSeries).font(.system(size: 26)).fontWeight(.light)
             }
-            HStack {
-                Text("Type: ").font(.system(size: 25)).fontWeight(.bold).padding(.leading, 15)
-                Text(type).font(.system(size: 25)).fontWeight(.light).padding(.trailing, 30)
-                Spacer()
+            VStack (alignment: .center){
+                Text("Type:").font(.system(size: 23)).fontWeight(.bold)
+                Text(type).font(.system(size: 26)).fontWeight(.light)
             }
         }.minimumScaleFactor(0.1)
     }

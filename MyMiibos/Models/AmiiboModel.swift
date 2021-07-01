@@ -47,14 +47,12 @@ extension SingleAmiibo {
 
 extension Amiibo {
     
-    func getAmiiboSeriesLogo() -> Image {
-        print(amiiboSeries)
-        
+    func getAmiiboSeriesLogo() -> Image {        
         switch amiiboSeries {
         case "Super Smash Bros.":
             return Image("smash")
         case "Super Nintendo World":
-            return Image("brickwall")
+            return Image("gameboy")
         case "Super Mario Bros.":
             return Image("mushroom")
         case "Chibi-Robo":
@@ -64,11 +62,11 @@ extension Amiibo {
         case "Splatoon":
             return Image("ghost")
         case "Animal Crossing":
-            return Image("leaf")
-        case "8 - Bit Mario":
-            return Image("mushroom")
+            return Image("tea")
+        case "8-bit Mario":
+            return Image("brickwall")
         case "Skylanders":
-            return Image("trophy")
+            return Image("sun")
         case "Legend Of Zelda":
             return Image("zelda")
         case "Shovel Knight":
@@ -78,9 +76,9 @@ extension Amiibo {
         case "Pokemon":
             return Image("pokeball")
         case "Mario Sports Superstars":
-            return Image("mushroom")
+            return Image("trophy")
         case "Monster Hunter":
-            return Image("sword")
+            return Image("mask")
         case "BoxBoy!":
             return Image("switch")
         case "Pikmin":
@@ -100,56 +98,54 @@ extension Amiibo {
         }
     }
     
-    func getAmiiboSeriesColor() -> Image {
-        print(amiiboSeries)
-        
+    func getAmiiboSeriesColor() -> Color {
         switch amiiboSeries {
         case "Super Smash Bros.":
-            return Image("smash")
+            return .greySNES
         case "Super Nintendo World":
-            return Image("brickwall")
+            return .purpleSNES
         case "Super Mario Bros.":
-            return Image("mushroom")
+            return .redMario
         case "Chibi-Robo":
-            return Image("switch")
+            return .greyRobo
         case "Yoshi's Woolly World":
-            return Image("mushroom")
+            return .greenYoshi
         case "Splatoon":
-            return Image("ghost")
+            return .pinkSplatoon
         case "Animal Crossing":
-            return Image("leaf")
-        case "8 - Bit Mario":
-            return Image("mushroom")
+            return .greenPikmin
+        case "8-bit Mario":
+            return .redMario
         case "Skylanders":
-            return Image("trophy")
+            return .blueSkylanders
         case "Legend Of Zelda":
-            return Image("zelda")
+            return .greenZelda
         case "Shovel Knight":
-            return Image("sword")
+            return .blueShovelKnight
         case "Kirby":
-            return Image("kirby")
+            return .pinkKirby
         case "Pokemon":
-            return Image("pokeball")
+            return .yellowPokemon
         case "Mario Sports Superstars":
-            return Image("mushroom")
+            return .redMario
         case "Monster Hunter":
-            return Image("sword")
+            return .brownMonster
         case "BoxBoy!":
-            return Image("switch")
+            return .gray
         case "Pikmin":
-            return Image("leaf")
+            return .greenPikmin
         case "Fire Emblem":
-            return Image("sword")
+            return .black
         case "Metroid":
-            return Image("aim")
+            return .orangeMetroid
         case "Others":
-            return Image("switch")
+            return .gray
         case "Mega Man":
-            return Image("aim")
+            return .blueMegaMan
         case "Diablo":
-            return Image("sword")
+            return .redDiablo
         default:
-            return Image("switch")
+            return .black
         }
     }
 }

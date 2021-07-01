@@ -9,30 +9,26 @@ import SwiftUI
 
 struct AmiiboDetailView: View {
     
-    @ObservedObject private var amiiboDetailVM: AmiiboDetailViewModel
+    @ObservedObject var amiiboDetailVM: AmiiboDetailViewModel
     
     var head: String
     var tail: String
+    var color: Color
     
-//    var amiibotest: Amiibo = Amiibo(amiiboSeries: "Super Smash Bros.", character: "Mario", gameSeries: "Super Mario", head: "00000000", image: "https://raw.githubusercontent.com/N3evin/AmiiboAPI/master/images/icon_00000000-00000002.png", name: "Mario", tail: "00000002", type: "Figure")
-    
-    init(head: String, tail: String) {
+    init(head: String, tail: String, color: Color) {
         self.amiiboDetailVM = AmiiboDetailViewModel()
         self.head = head
         self.tail = tail
+        self.color = color
+//        UINavigationBar.appearance().backgroundColor = UIColor(color)
     }
     
     var body: some View {
         VStack(spacing: 50) {
-//            HStack {
-//                Image("mushroom").resizable().aspectRatio(contentMode: .fit).aspectRatio(1, contentMode: .fit).foregroundColor(.red).padding(.trailing, 10.0).frame(minWidth: 0, idealWidth: 300, maxWidth: 400, minHeight: 70, idealHeight: 80, maxHeight: 80, alignment: .trailing)
-//                Spacer()
-//            }
-            
             //            HStack {
             //            Image().resizable().scaledToFit().shadow(radius: 15).frame(width: 300, height: 300, alignment: .center)
-            Image(uiImage: amiiboDetailVM.loadImage()).resizable().scaledToFit().shadow(radius: 30)//.background(Rectangle()).foregroundColor(.orange).overlay(Rectangle().stroke(Color.gray, lineWidth: 4)).shadow(radius: 15)
-
+            Image(uiImage: amiiboDetailVM.loadImage()).resizable().scaledToFit().frame(width: 300, height: 300, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).shadow(radius: 30)//.background(Rectangle()).foregroundColor(.orange).overlay(Rectangle().stroke(Color.gray, lineWidth: 4)).shadow(radius: 15)
+            
             AmiiboDetailText(amiiboSeries: amiiboDetailVM.amiiboSeries, gameSeries: amiiboDetailVM.gameSeries, type: amiiboDetailVM.type)
             Spacer()
         }
@@ -41,11 +37,12 @@ struct AmiiboDetailView: View {
             self.amiiboDetailVM.fetchAmiiboDetail(amiiboHead: head, amiiboTail: tail)
         }.navigationTitle(amiiboDetailVM.name).minimumScaleFactor(0.5)
         //        .navigationBarItems(trailing: Image("mushroom").imageScale(.sma)
+        .navigationBarColor(UIColor(color))
     }
 }
 
 struct AmiiboDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        AmiiboDetailView(head: "0008ff00", tail: "023b0702")
+        AmiiboDetailView(head: "0008ff00", tail: "023b0702", color: .blueMegaMan)
     }
 }

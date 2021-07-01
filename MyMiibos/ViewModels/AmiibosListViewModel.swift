@@ -20,13 +20,7 @@ class AmiibosListViewModel: ObservableObject {
     func fetchAllAmiibos() {
         self.cancellable = ApiWebservice().getAllAmiibos()
             .sink (receiveCompletion:  {_ in }, receiveValue: { values in
-                
-//                for am in value.amiibo {
-//                    print(am.name)
-//                }
-//                print("\(value)")
                 self.amiibos = values.amiibo
-                
             })
     }
 }

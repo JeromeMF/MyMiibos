@@ -14,8 +14,8 @@
             filePath = "MyMiibos/Views/AmiibosListView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "24"
-            endingLineNumber = "24"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "body"
             landmarkType = "24">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "MyMiibos/ViewModels/AmiibosListViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
             landmarkName = "fetchAllAmiibos()"
             landmarkType = "7">
          </BreakpointContent>
@@ -39,128 +39,33 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "680A747E-4873-4B63-AEB5-145A07833A79"
+            uuid = "89A25FF9-7E27-427B-B862-D519832ED093"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyMiibos/ViewModels/AmiiboDetailViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "22"
-            endingLineNumber = "22"
-            landmarkName = "fetchAmiiboDetail(amiiboHead:amiiboTail:)"
-            landmarkType = "7">
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "gameSeries"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6E584C37-70AF-4F07-A191-14ADAA27B5EE"
+            uuid = "8ACA3FCC-1C48-4EFC-9939-A78B7B3AC52C"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyMiibos/ViewModels/AmiiboDetailViewModel.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "fetchAmiiboDetail(amiiboHead:amiiboTail:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "6E584C37-70AF-4F07-A191-14ADAA27B5EE - 8ef9be978843c7cf"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MyMiibos.AmiiboDetailViewModel.fetchAmiiboDetail(amiiboHead: Swift.String, amiiboTail: Swift.String) -&gt; ()"
-                  moduleName = "MyMiibos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerome/Projects/MyMiibos/MyMiibos/ViewModels/AmiiboDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "479">
-               </Location>
-               <Location
-                  uuid = "6E584C37-70AF-4F07-A191-14ADAA27B5EE - 7a07325e268522c1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Combine.Subscribers.Completion&lt;Swift.Never&gt;) -&gt; () in MyMiibos.AmiiboDetailViewModel.fetchAmiiboDetail(amiiboHead: Swift.String, amiiboTail: Swift.String) -&gt; ()"
-                  moduleName = "MyMiibos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerome/Projects/MyMiibos/MyMiibos/ViewModels/AmiiboDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "4">
-               </Location>
-               <Location
-                  uuid = "6E584C37-70AF-4F07-A191-14ADAA27B5EE - 3e1a93c509f45a8d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #3 (MyMiibos.Amiibo) -&gt; () in MyMiibos.AmiiboDetailViewModel.fetchAmiiboDetail(amiiboHead: Swift.String, amiiboTail: Swift.String) -&gt; ()"
-                  moduleName = "MyMiibos"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/jerome/Projects/MyMiibos/MyMiibos/ViewModels/AmiiboDetailViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "21"
-                  endingLineNumber = "21"
-                  offsetFromSymbolStart = "42">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2D879D04-4586-40EA-B561-B60B2D9F7528"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyMiibos/ViewModels/AmiiboDetailViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "fetchAmiiboDetail(amiiboHead:amiiboTail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "218261B0-B756-480F-BD06-13B4B6A29C65"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyMiibos/ViewModels/AmiiboDetailViewModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
-            landmarkName = "fetchAmiiboDetail(amiiboHead:amiiboTail:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "6E07F163-63E1-41DE-9AD4-3FC1969EAA3C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MyMiibos/Models/AmiiboModel.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "getAmiiboSeriesLogo()"
-            landmarkType = "7">
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "amiiboSeries"
+            landmarkType = "24">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
