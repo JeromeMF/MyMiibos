@@ -20,7 +20,6 @@ struct AmiiboDetailView: View {
         self.head = head
         self.tail = tail
         self.color = color
-//        UINavigationBar.appearance().backgroundColor = UIColor(color)
     }
     
     var body: some View {
@@ -38,6 +37,7 @@ struct AmiiboDetailView: View {
         }.navigationTitle(amiiboDetailVM.name).minimumScaleFactor(0.5)
         //        .navigationBarItems(trailing: Image("mushroom").imageScale(.sma)
         .navigationBarColor(UIColor(color))
+        
     }
 }
 

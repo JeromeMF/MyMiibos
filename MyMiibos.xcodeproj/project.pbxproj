@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		021F6977268F81C7002726C7 /* NavigationBarModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021F6976268F81C7002726C7 /* NavigationBarModifier.swift */; };
 		022C580B268B766B00ED623C /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C580A268B766B00ED623C /* ImageLoader.swift */; };
 		022C580D268B7D0100ED623C /* AmiiboListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C580C268B7D0100ED623C /* AmiiboListRowView.swift */; };
 		022C580F268CA56700ED623C /* AmiiboDetailText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022C580E268CA56700ED623C /* AmiiboDetailText.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		021F6976268F81C7002726C7 /* NavigationBarModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarModifier.swift; sourceTree = "<group>"; };
 		022C580A268B766B00ED623C /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
 		022C580C268B7D0100ED623C /* AmiiboListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboListRowView.swift; sourceTree = "<group>"; };
 		022C580E268CA56700ED623C /* AmiiboDetailText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDetailText.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				022C580A268B766B00ED623C /* ImageLoader.swift */,
+				021F6976268F81C7002726C7 /* NavigationBarModifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			files = (
 				022C580D268B7D0100ED623C /* AmiiboListRowView.swift in Sources */,
 				02544B9B2685F74A00D226AA /* AmiiboModel.swift in Sources */,
+				021F6977268F81C7002726C7 /* NavigationBarModifier.swift in Sources */,
 				02544BA5268B326800D226AA /* AmiiboDetailViewModel.swift in Sources */,
 				02544B9D2685F9F500D226AA /* ApiService.swift in Sources */,
 				02544BA3268B31FB00D226AA /* AmiiboDetailView.swift in Sources */,

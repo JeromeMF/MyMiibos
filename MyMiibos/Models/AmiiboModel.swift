@@ -47,7 +47,7 @@ extension SingleAmiibo {
 
 extension Amiibo {
     
-    func getAmiiboSeriesLogo() -> Image {        
+    func amiiboSeriesLogo() -> Image {
         switch amiiboSeries {
         case "Super Smash Bros.":
             return Image("smash")
@@ -98,7 +98,7 @@ extension Amiibo {
         }
     }
     
-    func getAmiiboSeriesColor() -> Color {
+    func amiiboSeriesColor() -> Color {
         switch amiiboSeries {
         case "Super Smash Bros.":
             return .greySNES
