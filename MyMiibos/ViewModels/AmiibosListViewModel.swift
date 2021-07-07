@@ -12,12 +12,13 @@ class AmiibosListViewModel: ObservableObject {
     
     @Published var amiibos = [Amiibo]()
     @Published var amiibosDic = [String: [Amiibo]]()
-    @Published var amiibosBySeries = [Amiibo]()
+//    @Published var amiiboSeries = [String]()
     
     private var cancellable: AnyCancellable?
     
     init() {
-        fetchAllAmiibos()
+        //        fetchAllAmiibos()
+        fetchAmiibosGroupedByAmiiboSeries()
     }
     
     func fetchAllAmiibos() {
@@ -31,19 +32,43 @@ class AmiibosListViewModel: ObservableObject {
         self.cancellable = ApiWebservice().getAllAmiibos()
             .sink (receiveCompletion:  {_ in }, receiveValue: { values in
                 
-                let groupBySeries = Dictionary(grouping: values.amiibo, by: \.amiiboSeries)
-                self.amiibosDic = groupBySeries
+                let groupBySeries = Dictionary(grouping: values.amiibo.sorted{ $0.name < $1.name}, by: \.amiiboSeries)
+                self.amiibosDic = groupBySeries                
             })
     }
     
-    func filterAmiibosByAmiiboSeries(series: String) {
-        self.cancellable = ApiWebservice().getAllAmiibos()
-            .sink (receiveCompletion:  {_ in }, receiveValue: { values in
-                
-                let groupBySeries = Dictionary(grouping: values.amiibo, by: \.amiiboSeries)[series]
-                
-                guard let goupedAmiibos = groupBySeries else { return }
-                self.amiibosBySeries = goupedAmiibos
-            })
-    }
+    //    func fetchAmiibosSeries() {
+    //        self.cancellable = ApiWebservice().getAllAmiibos()
+    //            .sink (receiveCompletion:  {_ in }, receiveValue: { values in
+    //                
+    //                let uniqueValues = Array(Set(values.amiibo.map{ $0.amiiboSeries }))
+    //                
+    //                let alphabeticalSeriesArray = uniqueValues.sorted { $0 < $1 }
+    //                
+    //                self.amiiboSeries = alphabeticalSeriesArray
+    //            })
+    //    }
+    //    
+    //    func filterAmiibosByAmiiboSeries(series: String) {
+    //        self.cancellable = ApiWebservice().getAllAmiibos()
+    //            .sink (receiveCompletion:  {_ in }, receiveValue: { values in
+    //
+    //                let groupBySeries = Dictionary(grouping: values.amiibo, by: \.amiiboSeries)[series]
+    //
+    //                guard let goupedAmiibos = groupBySeries else { return }
+    //                self.amiibosBySeries = goupedAmiibos
+    //
+    //
+    //            })
+    //    }
+    //
+    //    func fetchAmiibosBy(amiiboSeries: String) {
+    //        self.cancellable = ApiWebservice().getAmiibosBy(amiiboSeries: amiiboSeries)
+    //            .sink(receiveCompletion: { _ in }, receiveValue: { values in
+    //
+    //                self.amiibosBySeries = values.amiibo
+    //
+    ////                print(values.amiibo)
+    //            })
+    //    }
 }

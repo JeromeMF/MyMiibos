@@ -39,4 +39,19 @@ class ApiWebservice {
         
         return publisher
     }
+    
+    func getAmiibosBy(amiiboSeries: String) -> AnyPublisher<AmiiboList, Error> {
+        
+        guard let url = URL(string: "https://amiiboapi.com/api/amiibo/?amiiboSeries=\(amiiboSeries.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!)") else {
+            fatalError("Invalid URL")
+        }
+        
+        let publisher = URLSession.shared.dataTaskPublisher(for: url)
+            .receive(on: RunLoop.main)
+            .map(\.data)
+            .decode(type: AmiiboList.self, decoder: JSONDecoder())
+            .eraseToAnyPublisher()
+        
+        return publisher
+    }
 }
