@@ -32,7 +32,7 @@ class AmiibosListViewModel: ObservableObject {
         self.cancellable = ApiWebservice().getAllAmiibos()
             .sink (receiveCompletion:  {_ in }, receiveValue: { values in
                 
-                let groupBySeries = Dictionary(grouping: values.amiibo.sorted{ $0.name < $1.name}, by: \.amiiboSeries)
+                let groupBySeries = Dictionary(grouping: values.amiibo.sorted{ $0.name < $1.name}, by: \.amiiboSeries) // Ex: ["Link OoT": [ZeldaAmiibo1, ZeldaAmiibo2, etc]]()
                 self.amiibosDic = groupBySeries                
             })
     }

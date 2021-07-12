@@ -11,6 +11,7 @@ import Combine
 struct AmiibosListView: View {
     
     @ObservedObject var amiiboListVM = AmiibosListViewModel()
+    @State var searchTerm = ""
     
     //    init() {
     //        UINavigationBar.appearance().backgroundColor = UIColor(displayP3Red: 230/255, green: 0/255, blue: 18/255, alpha: 1.0)
@@ -23,18 +24,24 @@ struct AmiibosListView: View {
     var body: some View {
         ZStack {
             Color.backgroundColor
+            //            VStack {
+            //            SearchBar(searchTerm: $searchTerm)
             NavigationView {
-                List  {
-                    ForEach(Array(self.amiiboListVM.amiibosDic.keys).sorted(), id: \.self) { series in
-                        Section(header: Text("\(series)")) {
-                            ForEach(self.amiiboListVM.amiibosDic[series]!, id: \.name) { amiibo in
-                                NavigationLink(
-                                    destination: AmiiboDetailView(head: amiibo.head, tail: amiibo.tail, color: amiibo.amiiboSeriesColor())) {
-                                    AmiiboListRowView.init(name: amiibo.name, series: amiibo.amiiboSeries, logo: amiibo.amiiboSeriesLogo(), logoColor: amiibo.amiiboSeriesColor()).frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                VStack {
+                    SearchBar(searchTerm: $searchTerm).padding(.top, 10).padding(.bottom, 4)
+                    List  {
+                        ForEach(Array(self.amiiboListVM.amiibosDic.keys).sorted(), id: \.self) { series in
+                            Section(header: Text("\(series)")) {
+                                ForEach(self.amiiboListVM.amiibosDic[series]!, id: \.name) { amiibo in
+                                    NavigationLink(
+                                        destination: AmiiboDetailView(head: amiibo.head, tail: amiibo.tail, color: amiibo.amiiboSeriesColor())) {
+                                        AmiiboListRowView.init(name: amiibo.name, series: amiibo.amiiboSeries, logo: amiibo.amiiboSeriesLogo(), logoColor: amiibo.amiiboSeriesColor()).frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
+                                    }
                                 }
                             }
                         }
                     }
+                    .padding(0.0)
                 }
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Amiibos")
@@ -45,8 +52,8 @@ struct AmiibosListView: View {
                 //            }, label: {
                 //                Text("Fetch amiibos")
                 //            }))
-                
             }
+            //            }
         }
     }
 }
