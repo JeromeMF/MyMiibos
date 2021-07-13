@@ -27,12 +27,12 @@ struct AmiibosListView: View {
             //            VStack {
             //            SearchBar(searchTerm: $searchTerm)
             NavigationView {
-                VStack {
-                    SearchBar(searchTerm: $searchTerm).padding(.top, 10).padding(.bottom, 4)
+                VStack (alignment: .leading){
+                    SearchBar(searchTerm: $searchTerm).padding(.top, 10).padding(.bottom, 4).frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
                     List  {
                         ForEach(Array(self.amiiboListVM.amiibosDic.keys).sorted(), id: \.self) { series in
                             Section(header: Text("\(series)")) {
-                                ForEach(self.amiiboListVM.amiibosDic[series]!, id: \.name) { amiibo in
+                                ForEach(self.amiiboListVM.amiibosDic[series]!.filter({ searchTerm.isEmpty ? true : $0.name.contains(searchTerm) }), id: \.name) { amiibo in
                                     NavigationLink(
                                         destination: AmiiboDetailView(head: amiibo.head, tail: amiibo.tail, color: amiibo.amiiboSeriesColor())) {
                                         AmiiboListRowView.init(name: amiibo.name, series: amiibo.amiiboSeries, logo: amiibo.amiiboSeriesLogo(), logoColor: amiibo.amiiboSeriesColor()).frame(height: 60, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
@@ -41,9 +41,8 @@ struct AmiibosListView: View {
                             }
                         }
                     }
-                    .padding(0.0)
                 }
-                .listStyle(GroupedListStyle())
+                .listStyle(DefaultListStyle())
                 .navigationBarTitle("Amiibos")
                 .navigationBarColor(.red)
                 
@@ -55,21 +54,6 @@ struct AmiibosListView: View {
             }
             //            }
         }
-    }
-}
-
-struct ListHeader: View {
-    var body: some View {
-        HStack {
-            Image(systemName: "map")
-            Text("Hiking Trails in Silicon Valley")
-        }
-    }
-}
-
-struct ListFooter: View {
-    var body: some View {
-        Text("Remember to pack plenty of water and bring sunscreen.")
     }
 }
 
