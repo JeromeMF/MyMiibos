@@ -71,11 +71,4 @@ class AmiibosListViewModel: ObservableObject {
     ////                print(values.amiibo)
     //            })
     //    }
-    
-    //MARK:- sectioned dictionary
-//        func getSectionedDictionary() -> Dictionary <String , [Amiibo]> {
-//            List(todoItems.filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { item in
-//                Text(item.name)
-//            }
-//        }
 }

@@ -3,11 +3,11 @@
 //  MyMiibos
 //
 //  Created by Jérôme Figueiredo on 12/07/2021.
-//
+// DEPRECATED
 
 import SwiftUI
 
-struct SearchBar: View {
+struct SearchBar2: View {
     
     @Binding var searchTerm : String
     @State var showCancelButton = false
@@ -58,6 +58,6 @@ extension UIApplication {
 struct SearchBar_Previews: PreviewProvider {
     
     static var previews: some View {
-        SearchBar(searchTerm: .constant(""))
+        SearchBar2(searchTerm: .constant(""))
     }
 }

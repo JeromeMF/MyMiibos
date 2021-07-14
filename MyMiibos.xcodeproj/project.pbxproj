@@ -21,7 +21,9 @@
 		02544BA3268B31FB00D226AA /* AmiiboDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02544BA2268B31FB00D226AA /* AmiiboDetailView.swift */; };
 		02544BA5268B326800D226AA /* AmiiboDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02544BA4268B326800D226AA /* AmiiboDetailViewModel.swift */; };
 		02DBA42E268DD4AD005290E3 /* Color+Appcolors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DBA42D268DD4AD005290E3 /* Color+Appcolors.swift */; };
-		02E13F65269C4AE800E07812 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E13F64269C4AE800E07812 /* SearchBar.swift */; };
+		02E13F65269C4AE800E07812 /* SearchBar2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E13F64269C4AE800E07812 /* SearchBar2.swift */; };
+		02E13F69269F08FC00E07812 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E13F68269F08FC00E07812 /* SearchBar.swift */; };
+		02E13F6B269F090100E07812 /* ViewControllerResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E13F6A269F090100E07812 /* ViewControllerResolver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,7 +43,9 @@
 		02544BA2268B31FB00D226AA /* AmiiboDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDetailView.swift; sourceTree = "<group>"; };
 		02544BA4268B326800D226AA /* AmiiboDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiiboDetailViewModel.swift; sourceTree = "<group>"; };
 		02DBA42D268DD4AD005290E3 /* Color+Appcolors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Appcolors.swift"; sourceTree = "<group>"; };
-		02E13F64269C4AE800E07812 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		02E13F64269C4AE800E07812 /* SearchBar2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar2.swift; sourceTree = "<group>"; };
+		02E13F68269F08FC00E07812 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		02E13F6A269F090100E07812 /* ViewControllerResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerResolver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +132,7 @@
 				02544BA2268B31FB00D226AA /* AmiiboDetailView.swift */,
 				022C580C268B7D0100ED623C /* AmiiboListRowView.swift */,
 				022C580E268CA56700ED623C /* AmiiboDetailText.swift */,
-				02E13F64269C4AE800E07812 /* SearchBar.swift */,
+				02E13F6C269F291F00E07812 /* SearchBar */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -148,6 +152,16 @@
 				02DBA42D268DD4AD005290E3 /* Color+Appcolors.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		02E13F6C269F291F00E07812 /* SearchBar */ = {
+			isa = PBXGroup;
+			children = (
+				02E13F68269F08FC00E07812 /* SearchBar.swift */,
+				02E13F64269C4AE800E07812 /* SearchBar2.swift */,
+				02E13F6A269F090100E07812 /* ViewControllerResolver.swift */,
+			);
+			path = SearchBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,13 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E13F65269C4AE800E07812 /* SearchBar.swift in Sources */,
+				02E13F65269C4AE800E07812 /* SearchBar2.swift in Sources */,
+				02E13F6B269F090100E07812 /* ViewControllerResolver.swift in Sources */,
 				022C580D268B7D0100ED623C /* AmiiboListRowView.swift in Sources */,
 				02544B9B2685F74A00D226AA /* AmiiboModel.swift in Sources */,
 				021F6977268F81C7002726C7 /* NavigationBarModifier.swift in Sources */,
 				02544BA5268B326800D226AA /* AmiiboDetailViewModel.swift in Sources */,
 				02544B9D2685F9F500D226AA /* ApiService.swift in Sources */,
 				02544BA3268B31FB00D226AA /* AmiiboDetailView.swift in Sources */,
+				02E13F69269F08FC00E07812 /* SearchBar.swift in Sources */,
 				02544BA126862F4400D226AA /* AmiibosListView.swift in Sources */,
 				02DBA42E268DD4AD005290E3 /* Color+Appcolors.swift in Sources */,
 				022C580F268CA56700ED623C /* AmiiboDetailText.swift in Sources */,
